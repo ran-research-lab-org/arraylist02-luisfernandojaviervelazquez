@@ -91,26 +91,14 @@ ArrayList& ArrayList::operator=(const ArrayList &b) {
 
 
 ArrayList& ArrayList::operator+(const ArrayList &b) {
-   length = b.length;
+   length = length-1 + b.length;
 
     for(int i = 0;i < b.length;i++)
     {
         append(b.A[i]);
     }
     return *this;
-  /*int *C = new int[length + b.length];
 
-  for(int i = 0; i <= length; i++)
-  {
-      C[i] = A[i];
-  }
-  for (int i = length +1; i < length + b.length; i++)
-  {
-      C[i]=b.A[i];
-  }
-   delete[] A;
-    A = C;
-   return *this;*/
 }
 
 void ArrayList::removeOdds() {
