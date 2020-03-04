@@ -115,25 +115,24 @@ void ArrayList::removeOdds() {
 void ArrayList :: mode() const {
 
     int *B= new int[length];
-    B=A;
-    delete [] A;
+
     int count = 0;
     int number = 0;
     for(int i = 0; i < length;i++)
     {
-        A[B[i] - 1]++;
+        B[A[i] - 1]++;
 
-        if(count < A[B[i]-1])
+        if(count < B[A[i]-1])
         {
-            count = A[B[i]-1];
-            number = B[i];
+            count = B[A[i]-1];
+            number = A[i];
         }
 
     }
 
     for(int i = 0; i < length; i++)
     {
-        if(count == A[B[i]-1] && number != B[i])
+        if(count == B[A[i]-1] && number != A[i])
             cout << "None"<< endl;
         else
             cout << number << endl;
