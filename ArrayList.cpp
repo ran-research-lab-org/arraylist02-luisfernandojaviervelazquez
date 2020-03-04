@@ -91,14 +91,14 @@ ArrayList& ArrayList::operator=(const ArrayList &b) {
 
 
 ArrayList& ArrayList::operator+(const ArrayList &b) {
-   length = b.length;
+  /* length = b.length;
 
     for(int i = 0;i < b.length;i++)
     {
         append(b.A[i]);
     }
-    return *this;
-  /*int *C = new int[length + b.length];
+    return *this;*/
+  int *C = new int[length + b.length];
 
   for(int i = 0; i <= length; i++)
   {
@@ -108,7 +108,9 @@ ArrayList& ArrayList::operator+(const ArrayList &b) {
   {
       C[i]=b.A[i];
   }
-    return *this;*/
+   delete[] A;
+    A = C;
+   return *this;
 }
 
 void ArrayList::removeOdds() {
@@ -125,6 +127,8 @@ void ArrayList::removeOdds() {
 void ArrayList :: mode() const {
 
     int *B= new int[length];
+    B=A;
+    delete [] A;
     int count = 0;
     int number = 0;
     for(int i = 0; i < length;i++)
@@ -133,7 +137,7 @@ void ArrayList :: mode() const {
 
         if(count < A[B[i]-1])
         {
-            count = A[B[i]-'a'];
+            count = A[B[i]-1];
             number = B[i];
         }
 
@@ -141,7 +145,7 @@ void ArrayList :: mode() const {
 
     for(int i = 0; i < length; i++)
     {
-        if(count == A[B[i]-'a'] && number != B [i])
+        if(count == A[B[i]-1] && number != B[i])
             cout << "None"<< endl;
         else
             cout << number << endl;

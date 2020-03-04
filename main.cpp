@@ -40,7 +40,7 @@ TEST_CASE( "ArrayList", "[ArrayList]" ) {
     REQUIRE(M.at(1) == 30);
     M.print();
     ArrayList P;
-  //  P = M;
+    //  P = M;
     P.prepend(5);
     REQUIRE(P.at(0) == 5);
     REQUIRE(M.at(0) == 10);
@@ -48,7 +48,7 @@ TEST_CASE( "ArrayList", "[ArrayList]" ) {
     P = P;
     REQUIRE(P.at(0) == 5);
     P.print();
-   // P.mode();
+    P.mode();
     P.removeOdds();
     P.print();
     ArrayList B;
