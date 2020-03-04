@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
+#include "C:\Users\Luis\OneDrive\Desktop\catch.hpp"
 #include "ArrayList.h"
 
 
@@ -38,15 +38,22 @@ TEST_CASE( "ArrayList", "[ArrayList]" ) {
     M.remove(1);
     REQUIRE(M.getSize()==3);
     REQUIRE(M.at(1) == 30);
-
+    M.print();
     ArrayList P;
-    P = M;
+  //  P = M;
     P.prepend(5);
     REQUIRE(P.at(0) == 5);
     REQUIRE(M.at(0) == 10);
-
+    P.append(5);
     P = P;
     REQUIRE(P.at(0) == 5);
+    P.print();
+   // REQUIRE(P.mode()==5);
+    P.removeOdds();
+    P.print();
+    ArrayList B;
+    B = P + M;
+    B.print();
 
 
 }

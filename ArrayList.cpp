@@ -90,3 +90,54 @@ ArrayList& ArrayList::operator=(const ArrayList &b) {
 }
 
 
+ArrayList& ArrayList::operator+(const ArrayList &b) {
+    length += b.length;
+
+    for(int i = 0;i < b.length;i++)
+    {
+        append(b.A[i]);
+    }
+    return *this;
+}
+
+void ArrayList::removeOdds() {
+    int a = 0;
+    for (int i = 0; i < length;i++)
+    {
+        if(A[i]%2==0)
+        {
+            swap(A[i],A[a++]);
+        }
+    }
+    length = a;
+}
+int ArrayList :: mode() const {
+
+    int *B= new int[length];
+    int count = 0;
+    int number = 0;
+    for(int i = 0; i < length;i++)
+    {
+        A[B[i] - 1]++;
+        if(count < A[B[i]-1])
+        {
+            count = A[B[i]-'a'];
+            number = B[i];
+        }
+
+    }
+    for(int i = 0; i < length; i++)
+    {
+        if(count == A[B[i]-'a'] && number != B [i])
+            exit(-1);
+        else
+            return number;
+    }
+
+}
+
+void ArrayList::print() const {
+    for (int i = 0 ; i < length; i++)
+        cout << A[i]<< " ";
+    cout << endl;
+}

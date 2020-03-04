@@ -21,6 +21,10 @@ public:
     void remove(int pos);
     ~ArrayList();
     ArrayList& operator=(const ArrayList &b);
+    ArrayList& operator+(const ArrayList &b);
+    void removeOdds();
+    int mode() const;
+    void ArrayList::print() const;
 };
 
 

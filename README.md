@@ -19,4 +19,3 @@ Añada las implementaciones de las siguientes funciones:
     * If the list L contains (33,22,44), L.mode() will return -1 because the list has no mode, i.e. there are two or more numbers that repeat the same number of times.
 
 Recuerde hacer casos de prueba en `main.cpp` para corroborar que las funciones están correctas. 
-
