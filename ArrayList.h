@@ -23,8 +23,8 @@ public:
     ArrayList& operator=(const ArrayList &b);
     ArrayList& operator+(const ArrayList &b);
     void removeOdds();
-    int mode() const;
-    void ArrayList::print() const;
+    void mode() const;
+    void print() const;
 };
 
 

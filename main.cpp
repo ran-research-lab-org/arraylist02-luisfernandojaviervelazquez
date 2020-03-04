@@ -48,7 +48,7 @@ TEST_CASE( "ArrayList", "[ArrayList]" ) {
     P = P;
     REQUIRE(P.at(0) == 5);
     P.print();
-   // REQUIRE(P.mode()==5);
+   // P.mode();
     P.removeOdds();
     P.print();
     ArrayList B;
